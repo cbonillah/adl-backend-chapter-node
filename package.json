@@ -9,6 +9,7 @@
 		"clean": "rimraf dist && rimraf coverage",
 		"debug": "npm run build && node --inspect dist/src/index.js",
 		"watch": "npm run build && npm run watch-app",
+		"watch-ts": "tsc -w",
 		"watch-app": "concurrently -k -p \"[{name}]\" -n \"Typescript,Application\" -c \"yellow.bold,cyan.bold\" \"tsc -w\" \"nodemon dist/src/index.js\"",
 		"start": "nodemon ."
 	},
