@@ -11,7 +11,8 @@
 		"watch": "npm run build && npm run watch-app",
 		"watch-ts": "tsc -w",
 		"watch-app": "concurrently -k -p \"[{name}]\" -n \"Typescript,Application\" -c \"yellow.bold,cyan.bold\" \"tsc -w\" \"nodemon dist/src/index.js\"",
-		"start": "nodemon ."
+    "start": "nodemon .",
+    "package": "npm run build && cp package.json dist && cd dist && npm i --production"
 	},
 	"author": "Christian Bonilla <christianb354@gmail.com>",
 	"license": "ISC",
